@@ -3,13 +3,12 @@
  */
 package basiclibrary;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.*;
 
 public class Library {
 
 
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
 //        System.out.println("hi");
 //        System.out.println("hello");
 //        int numTest = 5;
@@ -20,7 +19,7 @@ public class Library {
 //        System.out.println(checkDuplicates(testArr1));
 
 //
-    }
+//    }
 
     public int[] roll(int number) {
 
@@ -35,8 +34,8 @@ public class Library {
     public boolean checkDuplicates(int[] arr) {
         boolean returnedBoolean = false;
         for (int i = 0; i < arr.length; i++) {
-            for (int j = i+1; j < arr.length; j++) {
-                if (arr[i] == arr[j]){
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] == arr[j]) {
                     returnedBoolean = true;
                 }
             }
@@ -55,20 +54,101 @@ public class Library {
     }
 
 
-
-    public int[] minAvgOfArrOfArrays(int[][] array){
+    public int[] minAvgOfArrOfArrays(int[][] array) {
 
         ArrayList<Double> arrayOfAvgs = new ArrayList<>();
 
-        for(int i=0; i<array.length;i++){
-            double sum=0;
-            for(int j = 0 ; j<array[i].length;j++){
-                sum+=array[i][j];
+        for (int i = 0; i < array.length; i++) {
+            double sum = 0;
+            for (int j = 0; j < array[i].length; j++) {
+                sum += array[i][j];
             }
-            arrayOfAvgs.add(sum/array[i].length);
+            arrayOfAvgs.add(sum / array[i].length);
         }
         return array[arrayOfAvgs.indexOf(Collections.min(arrayOfAvgs))];
     }
+
+
+    public String notIncludedValues(int[][] arr) {
+
+
+//        int[][] arr = {
+//                {66, 64, 58, 65, 71, 57, 60},
+//                {57, 65, 65, 70, 72, 65, 51},
+//        };
+
+        int maxValue = arr[0][0];
+        int minValue = arr[0][0];
+        for (int i = 0; i < arr.length; i++) {
+
+            for (int j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] <= minValue) {
+                    minValue = arr[i][j];
+
+                }
+
+                if (arr[i][j] >= maxValue) {
+                    maxValue = arr[i][j];
+                }
+            }
+        }
+
+
+        Set<Integer> uniqueValues = new HashSet<>();
+        String returnedString = "High: " + maxValue + "\n" + "Low : " + minValue;
+
+        for (int i = 0; i < arr.length; i++) {
+
+            for (int j = 0; j < arr[i].length; j++) {
+
+                uniqueValues.add(arr[i][j]);
+
+            }
+        }
+
+        for(int i = minValue; i < maxValue; i++)
+
+            if(uniqueValues.contains(i)){
+
+            }
+            else{
+                returnedString = returnedString.concat("\n"+"Never saw temperature: " + i);
+            }
+
+
+
+        return returnedString;
+    }
+
+
+
+
+
+
+
+        public static String tally(List<String> votes) {
+            HashSet<String> votedItems = new HashSet<>();
+            votedItems.addAll(votes);
+            int numVotes = 0;
+            String winner= null;
+            for (String item : votedItems) {
+                int count = Collections.frequency(votes, item);
+
+                if (numVotes < count) {
+                    numVotes = count;
+                    winner = item;
+
+                }
+            }
+            return winner;
+        }
+
+
+
+
+
+
+
 
 }
 
