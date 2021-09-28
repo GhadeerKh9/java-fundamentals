@@ -8,7 +8,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
     @Test void someLibraryMethodReturnsTrue() {
-        Library classUnderTest = new Library();
-        assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
+        Library testing= new Library();
+
+        assertEquals(3,testing.roll(3).length);
+        assertTrue(testing.checkDuplicates(new int[]{2,2,3,4}));
+        assertEquals(3,testing.simpleAvg(new int[]{2,4}));
+        assertArrayEquals(new int[]{2,4},testing.minAvgOfArrOfArrays(new int[][]{{4,4}, {2, 4}}));
     }
 }
