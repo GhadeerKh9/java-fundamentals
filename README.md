@@ -10,4 +10,14 @@ pluralize
 flipNHeads
 clock
 
+Class 2
+Classes
+Main.java
+Library.java
+Test.java
 
+Methods
+Roll
+checkDuplicates
+simpleAvg
+minAvgOfArrOfArrays
