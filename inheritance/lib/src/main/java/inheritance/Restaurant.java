@@ -6,15 +6,17 @@ package inheritance;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 
-public class Restaurant implements ReviewInterface {
+public class Restaurant{
 
 
 
-    private final String name;
+    private  String name;
     private String priceCategory;
     private double numberOfStars;
 
+
     public LinkedList<Review> reviews  = new LinkedList<>();
+
 
 
 
@@ -24,6 +26,8 @@ public class Restaurant implements ReviewInterface {
 
 
         }
+
+
 
     @Override
     public String toString() {
@@ -52,8 +56,10 @@ public class Restaurant implements ReviewInterface {
     }
 
     public void addition(Review review){
+
         this.reviews.add(review);
         StarsUpdate();
+
     }
 
 
