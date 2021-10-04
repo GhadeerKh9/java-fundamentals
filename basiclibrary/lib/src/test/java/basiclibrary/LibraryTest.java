@@ -14,5 +14,13 @@ class LibraryTest {
         assertTrue(testing.checkDuplicates(new int[]{2,2,3,4}));
         assertEquals(3,testing.simpleAvg(new int[]{2,4}));
         assertArrayEquals(new int[]{2,4},testing.minAvgOfArrOfArrays(new int[][]{{4,4}, {2, 4}}));
+        assertSame("\nHigh: 72\n" +
+                "Low : 51\n"+"Never saw temperature: 63\n" +
+                "Never saw temperature: 67\n" +
+                "Never saw temperature: 68\n" +
+                "Never saw temperature: 69\n",testing.notIncludedValues(new int[][]{{66, 64, 58, 65, 71, 57, 60},
+                {57, 65, 65, 70, 72, 65, 51},
+                {55, 54, 60, 53, 59, 57, 61},
+                {65, 56, 55, 52, 55, 62, 57}}));
     }
 }
