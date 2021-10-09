@@ -61,7 +61,7 @@ public class Restaurant{
         StarsUpdate();
 
     }
-
+//
 
     public void StarsUpdate (){
         double current = 0;
