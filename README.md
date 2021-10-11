@@ -40,3 +40,17 @@ Review: body, author, numberOfStars
 
 Methods:
 Review, Getters, print, addition, StarsUpdate
+
+
+
+Lab 7
+classes are: Restaurant, Theater, Review, Library
+Fields
+For Restaurant: name, priceCategory, priceCategory
+
+Review: body, author, numberOfStars
+
+Methods:
+Review, Getters, print, addition, StarsUpdate
+
+Code is tested through setting some string and calling the corresponding methods that are applied to an instance of the class that contains these methods.
