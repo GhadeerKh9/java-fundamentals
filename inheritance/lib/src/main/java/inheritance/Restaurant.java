@@ -55,13 +55,12 @@ public class Restaurant{
         return reviews;
     }
 
-    public void addition(Review review){
+    public void addReview(Review review){
 
         this.reviews.add(review);
         StarsUpdate();
 
     }
-//
 
     public void StarsUpdate (){
         double current = 0;
@@ -72,5 +71,7 @@ public class Restaurant{
         current = Math.round(current );
         this.numberOfStars = current;
     }
+
+
 }
 
