@@ -43,7 +43,7 @@ Review, Getters, print, addition, StarsUpdate
 
 
 
-Lab 7
+# Lab: 07 - Inheritance and Interfaces 2
 classes are: Restaurant, Theater, Review, Library
 Fields
 For Restaurant: name, priceCategory, priceCategory
