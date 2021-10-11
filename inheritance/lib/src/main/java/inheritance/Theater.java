@@ -5,19 +5,17 @@ import java.util.LinkedList;
 
 public class Theater {
 
-  private String name;
+  public String name;
 
 
 
-  private HashMap<Review, String> reviewsOfTheater = new HashMap<>();
-  private LinkedList<String> movies = new LinkedList<>();
+  public HashMap<Review, String> reviewsOfTheater = new HashMap<>();
+  public LinkedList<String> movies = new LinkedList<>();
 
 
-//  public Theater(String name, HashMap<Review, String> reviewsOfTheater, LinkedList<String> movies) {
-//    this.name = name;
-//    this.reviewsOfTheater = reviewsOfTheater;
-//    this.movies = movies;
-//  }
+  public Theater(String name) {
+    this.name = name;
+  }
 
 
 
@@ -42,7 +40,7 @@ public class Theater {
   }
   public void removeMovie(String movie){
 
-    this.movies.add(movie);
+    this.movies.remove(movie);
 
 
   }
@@ -58,5 +56,14 @@ public class Theater {
   }
 
 
+
+  @Override
+  public String toString() {
+    return "Theater{" +
+            "name='" + name + '\'' +
+            ", reviewsOfTheater=" + reviewsOfTheater +
+            ", movies=" + movies +
+            '}';
+  }
 }
 
